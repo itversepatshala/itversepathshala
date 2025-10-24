@@ -1,297 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="z8X1pvSXDrJjd-Hc2IQC6mmPwmzg0yVGKT1ZHpBO63c" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home — IT VERSE PATHSHALA</title>
-  <link rel="icon" href="it verse.jpeg">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #0a0f24, #07112e, #0c1538);
-      color: #e4e4e4;
-      animation: fadeIn 1s ease-in-out;
-    }
+    <!-- ZAROORI VIEWPORT META TAG (Duplicate hataya gaya) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="z8X1pvSXDrJjd-Hc2IQC6mmPwmzg0yVGKT1ZHpBO63c" />
+    <meta charset="UTF-8">
+    <title>Home — IT VERSE PATHSHALA | Learn Tech Skills at Affordable Prices</title>
 
-    header {
-      background: rgba(10, 15, 36, 0.9);
-      backdrop-filter: blur(10px);
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+    <!-- 1. CANONICAL TAG (WWW Canonicalization) -->
+    <!-- Yeh Google ko batata hai ki aapka official URL kaunsa hai -->
+    <link rel="canonical" href="https://itversepatshala.github.io/itversepathshala/index.html">
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+    <!-- 2. SEO META DESCRIPTION (Keywords in Description) -->
+    <meta name="description" content="IT Verse Pathshala mein Basic to Advanced Computer Courses, C/C++ Programming, aur Full Stack Development job-ready training affordable fees mein seekhein. We Learn Together, We Grow Together.">
 
-    .brand img {
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      border: 2px solid #4fc3f7;
-      box-shadow: 0 0 10px #00bcd4;
-      transition: transform 0.3s ease;
-    }
+    <!-- 3. OPEN GRAPH META DATA (Social Media Sharing/Preview) -->
+    <meta property="og:title" content="IT VERSE PATHSHALA - Learn Tech Skills">
+    <meta property="og:description" content="Affordable fees mein hands-on Basic to Advanced Computer Courses aur Programming seekhein.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itversepatshala.github.io/itversepathshala/index.html">
+    <!-- Replace 'it verse.jpeg' with the full, absolute URL of the image for social sharing -->
+    <meta property="og:image" content="https://itversepatshala.github.io/itversepathshala/it%20verse.jpeg">
+    <meta property="og:locale" content="en_IN">
+    
+    <link rel="icon" href="it verse.jpeg">
 
-    .brand img:hover {
-      transform: rotate(10deg) scale(1.05);
+    <!-- 4. SCHEMA MARKUP (JSON-LD) for Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "IT VERSE PATHSHALA",
+      "url": "https://itversepatshala.github.io/itversepathshala/",
+      "logo": "https://itversepatshala.github.io/itversepathshala/it%20verse.jpeg",
+      "description": "Providing job-ready training in Computer Courses, Programming, and Full Stack Development.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Sales and enrollment",
+        "email": "mailto:itversepatshala@gmail.com"
+      }
     }
+    </script>
 
-    .brand h1 {
-      margin: 0;
-      font-size: 22px;
-      color: #00e5ff;
-      text-shadow: 0 0 10px #00bcd4;
-    }
+    <style>
+        /* Existing Styles */
+        body {
+          font-family: 'Poppins', sans-serif;
+          margin: 0;
+          padding: 0;
+          background: linear-gradient(135deg, #0a0f24, #07112e, #0c1538);
+          color: #e4e4e4;
+          animation: fadeIn 1s ease-in-out;
+        }
 
-    .slogan {
-      font-size: 12px;
-      color: #b0bec5;
-      letter-spacing: 1px;
-    }
+        header {
+          background: rgba(10, 15, 36, 0.9);
+          backdrop-filter: blur(10px);
+          padding: 15px 30px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+        }
 
-    nav a {
-      color: #e0f7fa;
-      margin-left: 18px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
+        .brand {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
 
-    nav a:hover, nav a.active {
-      color: #00bcd4;
-    }
+        .brand img {
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          border: 2px solid #4fc3f7;
+          box-shadow: 0 0 10px #00bcd4;
+          transition: transform 0.3s ease;
+        }
 
-    main {
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 50px;
-    }
+        .brand img:hover {
+          transform: rotate(10deg) scale(1.05);
+        }
 
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      max-width: 1100px;
-      animation: floatUp 1s ease;
-    }
+        .brand h1 {
+          margin: 0;
+          font-size: 22px;
+          color: #00e5ff;
+          text-shadow: 0 0 10px #00bcd4;
+        }
 
-    .hero h2 {
-      color: #00e5ff;
-      font-size: 32px;
-      margin-bottom: 15px;
-      text-shadow: 0 0 15px #00bcd4;
-    }
+        .slogan {
+          font-size: 12px;
+          color: #b0bec5;
+          letter-spacing: 1px;
+        }
 
-    .hero p.small {
-      color: #b0bec5;
-      margin-bottom: 20px;
-      max-width: 500px;
-      line-height: 1.5;
-    }
+        nav a {
+          color: #e0f7fa;
+          margin-left: 18px;
+          text-decoration: none;
+          font-weight: 500;
+          transition: color 0.3s ease;
+        }
 
-    .contact-buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+        nav a:hover, nav a.active {
+          color: #00bcd4;
+        }
 
-    .btn {
-      background: linear-gradient(90deg, #00bcd4, #0091ea);
-      border: none;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
+        main {
+          padding: 40px 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 50px;
+        }
 
-    .btn:hover {
-      background: linear-gradient(90deg, #0091ea, #00bcd4);
-      box-shadow: 0 0 15px #00e5ff;
-      transform: scale(1.05);
-    }
+        .hero {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          max-width: 1100px;
+          animation: floatUp 1s ease;
+        }
 
-    .hero img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      animation: floatUp 1.2s ease;
-    }
+        .hero h2 {
+          color: #00e5ff;
+          font-size: 32px;
+          margin-bottom: 15px;
+          text-shadow: 0 0 15px #00bcd4;
+        }
 
-    h3 {
-      color: #00e5ff;
-      text-align: center;
-      font-size: 28px;
-      text-shadow: 0 0 10px #00bcd4;
-      animation: floatUp 1s ease;
-    }
+        .hero p.small {
+          color: #b0bec5;
+          margin-bottom: 20px;
+          max-width: 500px;
+          line-height: 1.5;
+        }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      width: 100%;
-      max-width: 1000px;
-      animation: slideUp 1.2s ease;
-    }
+        .contact-buttons {
+          display: flex;
+          gap: 15px;
+          flex-wrap: wrap;
+        }
 
-    .card {
-      background: rgba(255,255,255,0.05);
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 0 15px rgba(0,188,212,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        .btn {
+          background: linear-gradient(90deg, #00bcd4, #0091ea);
+          border: none;
+          color: white;
+          padding: 12px 20px;
+          border-radius: 8px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-decoration: none;
+        }
 
-    .card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 0 25px #00e5ff;
-    }
+        .btn:hover {
+          background: linear-gradient(90deg, #0091ea, #00bcd4);
+          box-shadow: 0 0 15px #00e5ff;
+          transform: scale(1.05);
+        }
 
-    .card h4 {
-      color: #00e5ff;
-      margin-bottom: 5px;
-    }
+        .hero img {
+          width: 100%;
+          max-width: 500px;
+          border-radius: 12px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+          animation: floatUp 1.2s ease;
+        }
 
-    .card p.small {
-      color: #b0bec5;
-      margin-bottom: 10px;
-    }
+        h3 {
+          color: #00e5ff;
+          text-align: center;
+          font-size: 28px;
+          text-shadow: 0 0 10px #00bcd4;
+          animation: floatUp 1s ease;
+        }
 
-    .card .price {
-      color: #4fc3f7;
-      font-weight: bold;
-    }
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 20px;
+          width: 100%;
+          max-width: 1000px;
+          animation: slideUp 1.2s ease;
+        }
 
-    .section-card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0,188,212,0.2);
-      max-width: 700px;
-      text-align: center;
-      animation: floatUp 1s ease;
-    }
+        .card {
+          background: rgba(255,255,255,0.05);
+          border-radius: 16px;
+          padding: 20px;
+          box-shadow: 0 0 15px rgba(0,188,212,0.2);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    footer {
-      text-align: center;
-      padding: 25px 10px;
-      margin-top: 40px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      color: #b0bec5;
-    }
+        .card:hover {
+          transform: translateY(-5px) scale(1.02);
+          box-shadow: 0 0 25px #00e5ff;
+        }
 
-    footer strong {
-      color: #00e5ff;
-      font-size: 18px;
-    }
+        .card h4 {
+          color: #00e5ff;
+          margin-bottom: 5px;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        .card p.small {
+          color: #b0bec5;
+          margin-bottom: 10px;
+        }
 
-    @keyframes floatUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        .card .price {
+          color: #4fc3f7;
+          font-weight: bold;
+        }
 
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        .section-card {
+          background: rgba(255, 255, 255, 0.05);
+          padding: 25px;
+          border-radius: 16px;
+          box-shadow: 0 0 20px rgba(0,188,212,0.2);
+          max-width: 700px;
+          text-align: center;
+          animation: floatUp 1s ease;
+        }
 
-    @media(max-width: 700px){
-      .hero { flex-direction: column; text-align: center; }
-    }
-  </style>
+        footer {
+          text-align: center;
+          padding: 25px 10px;
+          margin-top: 40px;
+          border-top: 1px solid rgba(255,255,255,0.1);
+          color: #b0bec5;
+        }
+
+        footer strong {
+          color: #00e5ff;
+          font-size: 18px;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes floatUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+          from { opacity: 0; transform: translateY(50px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 5. MOBILE RESPONISIVENESS FIXES (New Media Query) */
+        @media(max-width: 700px){
+            .hero { 
+                flex-direction: column; 
+                text-align: center; 
+            }
+            
+            /* Header aur Navigation Fix */
+            header {
+                flex-direction: column;
+                padding: 15px 15px; 
+            }
+
+            .brand {
+                margin-bottom: 10px; 
+            }
+
+            .brand h1 {
+                font-size: 20px; /* Title ko thoda chota kiya */
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap; 
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 5px 8px; /* Margin adjust kiya */
+                font-size: 14px;
+                padding: 5px;
+            }
+
+            /* Main Content aur Padding Fix */
+            main {
+                padding: 20px 10px; 
+            }
+
+            /* Hero Section Images aur Text Fix */
+            .hero img {
+                max-width: 90%; 
+            }
+
+            .hero h2 {
+                font-size: 26px; /* Heading adjust ki */
+            }
+            
+            /* Grid Section Fix: Cards ko single column mein laaya */
+            .grid {
+                grid-template-columns: 1fr; 
+                gap: 15px;
+            }
+            
+            .card {
+                padding: 15px; 
+            }
+            
+            .contact-buttons {
+                justify-content: center; 
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="brand">
-      <img src="it verse.jpeg" alt="Logo">
-      <div>
-        <h1>IT VERSE PATHSHALA</h1>
-        <div class="slogan">We Learn Together, We Grow Together</div>
-      </div>
-    </div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="courses.html">Courses</a>
-      <a href="founder.html">Founder</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero fade-in" id="home">
-      <div>
-        <h2>Learn IT Skills at Affordable Prices</h2>
-        <p class="small">Hands-on, job-ready training — small batches and practical projects designed to make you workplace ready.</p>
-        <div class="contact-buttons">
-          <a class="btn" href="https://wa.me/919520608857" target="_blank">Join on WhatsApp</a>
-          <a class="btn" href="mailto:itversepatshala@gmail.com">Email Us</a>
+    <header>
+        <div class="brand">
+            <img src="it verse.jpeg" alt="IT Verse Pathshala Logo">
+            <div>
+                <h1>IT VERSE PATHSHALA</h1>
+                <div class="slogan">We Learn Together, We Grow Together</div>
+            </div>
         </div>
-      </div>
-      <div class="center">
-        <img src="it verse.jpeg" alt="banner">
-      </div>
-    </section>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="founder.html">Founder</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-    <section class="fade-in">
-      <h3>Featured Courses</h3>
-      <div class="grid">
-        <div class="card">
-          <h4>Basic to Advanced Computer Course</h4>
-          <p class="small">6 months covering fundamentals to advanced topics.</p>
-          <div class="price">₹500 / month</div>
-        </div>
-        <div class="card">
-          <h4>Programming (C, C++)</h4>
-          <p class="small">5–6 months. Job interview prep + projects.</p>
-          <div class="price">₹800 / month</div>
-        </div>
-        <div class="card">
-          <h4>Full Stack Development</h4>
-          <p class="small">6 months. Frontend + Backend + Projects.</p>
-          <div class="price">₹800 / month</div>
-        </div>
-      </div>
-    </section>
+    <main>
+        <section class="hero fade-in" id="home">
+            <div>
+                <h2>Learn IT Skills at Affordable Prices</h2>
+                <p class="small">Hands-on, job-ready training — small batches and practical projects designed to make you workplace ready.</p>
+                <div class="contact-buttons">
+                    <a class="btn" href="https://wa.me/919520608857" target="_blank">Join on WhatsApp</a>
+                    <a class="btn" href="mailto:itversepatshala@gmail.com">Email Us</a>
+                </div>
+            </div>
+            <div class="center">
+                <img src="it verse.jpeg" alt="IT Verse Pathshala banner">
+            </div>
+        </section>
 
-    <section class="fade-in">
-      <h3>Why Choose Us</h3>
-      <div class="section-card">
-        <p>Affordable fees, practical projects, small batches, and interview preparation integrated into every job-ready course.</p>
-      </div>
-    </section>
-  </main>
+        <section class="fade-in">
+            <h3>Featured Courses</h3>
+            <div class="grid">
+                <div class="card">
+                    <h4>Basic to Advanced Computer Course</h4>
+                    <p class="small">6 months covering fundamentals to advanced topics.</p>
+                    <div class="price">₹500 / month</div>
+                </div>
+                <div class="card">
+                    <h4>Programming (C, C++)</h4>
+                    <p class="small">5–6 months. Job interview prep + projects.</p>
+                    <div class="price">₹800 / month</div>
+                </div>
+                <div class="card">
+                    <h4>Full Stack Development</h4>
+                    <p class="small">6 months. Frontend + Backend + Projects.</p>
+                    <div class="price">₹800 / month</div>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <strong>IT VERSE PATHSHALA</strong><br>
-    <span class="small">We Learn Together, We Grow Together</span><br>
-    <small>© 2025 IT VERSE PATHSHALA — All rights reserved</small>
-  </footer>
+        <section class="fade-in">
+            <h3>Why Choose Us</h3>
+            <div class="section-card">
+                <p>Affordable fees, practical projects, small batches, and interview preparation integrated into every job-ready course.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <strong>IT VERSE PATHSHALA</strong><br>
+        <span class="small">We Learn Together, We Grow Together</span><br>
+        <small>© 2025 IT VERSE PATHSHALA — All rights reserved</small>
+    </footer>
 </body>
 </html>
