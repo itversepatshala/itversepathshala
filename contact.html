@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — IT VERSE PATHSHALA</title>
+  <title>Apply — IT VERSE PATHSHALA</title>
   <link rel="icon" href="it verse.jpeg">
   <style>
     body {
@@ -76,48 +76,127 @@
       padding: 40px 20px;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       flex-direction: column;
+      gap: 25px;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
     h3 {
       color: #00e5ff;
-      text-align: center;
       font-size: 28px;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       text-shadow: 0 0 15px #00bcd4;
       animation: floatUp 1s ease;
     }
 
+    .subtitle {
+      color: #b0bec5;
+      max-width: 700px;
+      font-size: 14px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+      gap: 24px;
+      width: 100%;
+    }
+
     .section-card {
       background: rgba(255, 255, 255, 0.05);
-      padding: 30px;
+      padding: 24px 24px 26px;
       border-radius: 16px;
       box-shadow: 0 0 20px rgba(0, 188, 212, 0.2);
-      max-width: 600px;
-      width: 100%;
       animation: floatUp 1.2s ease;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .section-card:hover {
-      transform: translateY(-5px) scale(1.02);
+      transform: translateY(-5px) scale(1.01);
       box-shadow: 0 0 30px #00e5ff;
+    }
+
+    .section-title {
+      font-size: 18px;
+      margin: 0 0 10px;
+      color: #e0f7fa;
+    }
+
+    .section-note {
+      font-size: 13px;
+      color: #b0bec5;
+      margin-bottom: 14px;
     }
 
     input, select, textarea {
       width: 100%;
       padding: 12px;
-      margin-top: 10px;
+      margin-top: 6px;
       border: none;
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.08);
       color: #e0f7fa;
       font-size: 15px;
+      box-sizing: border-box;
     }
 
     input::placeholder, textarea::placeholder {
       color: #b0bec5;
+    }
+
+    label {
+      font-size: 14px;
+      color: #cfd8dc;
+      display: block;
+      margin-top: 8px;
+    }
+
+    .inline-group {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+
+    .radio-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      cursor: pointer;
+    }
+
+    .radio-pill input {
+      width: auto;
+      margin: 0;
+    }
+
+    .course-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+      font-size: 12px;
+    }
+
+    .course-tag {
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(0, 188, 212, 0.16);
+      border: 1px solid rgba(0, 188, 212, 0.4);
+      color: #e0f7fa;
+      white-space: nowrap;
     }
 
     .btn {
@@ -128,9 +207,10 @@
       border-radius: 8px;
       font-weight: bold;
       cursor: pointer;
-      margin-top: 10px;
+      margin-top: 14px;
       transition: all 0.3s ease;
       width: 100%;
+      font-size: 15px;
     }
 
     .btn:hover {
@@ -161,6 +241,49 @@
       font-size: 18px;
     }
 
+    .small {
+      font-size: 12px;
+    }
+
+    .wh-contact {
+      margin-top: 6px;
+      font-size: 13px;
+    }
+
+    .wh-contact span {
+      display: block;
+    }
+
+    .wh-contact a {
+      font-weight: 500;
+    }
+
+    .course-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    .course-item {
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .course-name {
+      font-weight: 500;
+      color: #e0f7fa;
+    }
+
+    .course-meta {
+      font-size: 12px;
+      color: #b0bec5;
+      margin-top: 2px;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -169,6 +292,32 @@
     @keyframes floatUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      main {
+        align-items: stretch;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      nav a {
+        margin-left: 0;
+        margin-right: 12px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
@@ -186,32 +335,177 @@
       <a href="about.html">About</a>
       <a href="courses.html">Courses</a>
       <a href="founder.html">Founder</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="apply.html" class="active">Apply</a>
     </nav>
   </header>
 
   <main>
-    <h3>Contact & Enrollment</h3>
-    <div class="section-card">
-      <p>Email: <a href="mailto:itversepatshala@gmail.com">itversepatshala@gmail.com</a></p>
-      <p>WhatsApp: <a href="https://wa.me/919520608857" target="_blank">+91 9520608857</a></p>
-      <p class="small">Send a message using the form below or contact us directly via WhatsApp.</p>
-      <form 
-        onsubmit="event.preventDefault(); window.location='mailto:itversepatshala@gmail.com?subject=Enrollment%20Request&body=Name:%20'+this.name.value+'%0AWhatsApp:%20'+this.phone.value+'%0ACourse:%20'+this.course.value+'%0AMessage:%20'+this.message.value;"
-        style="margin-top:12px;display:flex;flex-direction:column;gap:12px;">
-        <input required name="name" placeholder="Full name">
-        <input required name="phone" placeholder="Phone / WhatsApp">
-        <select name="course">
-          <option>Basic to Advanced Computer</option>
-          <option>Programming (C, C++)</option>
-          <option>Full Stack Development</option>
-          <option>Python</option>
-          <option>Java</option>
-          <option>Android Development</option>
-        </select>
-        <textarea name="message" rows="4" placeholder="Anything we should know?"></textarea>
-        <button class="btn" type="submit">Send Enrollment Request</button>
-      </form>
+    <div>
+      <h3>Apply for Courses</h3>
+      <p class="subtitle">
+        Fill this application form to enroll in any course of IT VERSE PATHSHALA.
+        We’ll connect with you on WhatsApp for counseling, demo class and batch details.
+      </p>
+    </div>
+
+    <div class="layout">
+      <!-- LEFT: APPLICATION FORM -->
+      <div class="section-card">
+        <h4 class="section-title">Enrollment Application Form</h4>
+        <p class="section-note">
+          Fields marked with * are mandatory. You can choose any one course from the list.
+        </p>
+
+        <form
+          onsubmit="event.preventDefault();
+            const f = this;
+            const body =
+              'Name: ' + f.name.value + '\n' +
+              'Email: ' + (f.email.value || 'Not provided') + '\n' +
+              'WhatsApp: ' + f.phone.value + '\n' +
+              'City: ' + (f.city.value || 'Not provided') + '\n' +
+              'Preferred Mode: ' + f.mode.value + '\n' +
+              'Preferred Time: ' + f.timing.value + '\n' +
+              'Selected Course: ' + f.course.value + '\n' +
+              'Previous Knowledge: ' + (f.experience.value || 'Beginner / Not mentioned') + '\n' +
+              'Message: ' + (f.message.value || 'No extra message');
+            window.location =
+              'mailto:itversepatshala@gmail.com' +
+              '?subject=' + encodeURIComponent('New Course Enrollment Request') +
+              '&body=' + encodeURIComponent(body);
+          "
+          style="margin-top:6px;display:flex;flex-direction:column;gap:10px;"
+        >
+          <label>
+            Full Name *
+            <input required name="name" placeholder="Enter your full name">
+          </label>
+
+          <div class="inline-group">
+            <label>
+              WhatsApp Number *
+              <input required name="phone" placeholder="e.g. +91 9520608857">
+            </label>
+            <label>
+              Email ID
+              <input name="email" type="email" placeholder="Optional but recommended">
+            </label>
+          </div>
+
+          <div class="inline-group">
+            <label>
+              City
+              <input name="city" placeholder="Your city / location">
+            </label>
+            <label>
+              Preferred Mode *
+              <select name="mode" required>
+                <option value="Online">Online</option>
+                <option value="Offline">Offline</option>
+                <option value="Hybrid">Both / Flexible</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            Preferred Time *
+            <select name="timing" required>
+              <option value="Morning (7 AM - 11 AM)">Morning (7 AM - 11 AM)</option>
+              <option value="Afternoon (12 PM - 4 PM)">Afternoon (12 PM - 4 PM)</option>
+              <option value="Evening (5 PM - 9 PM)">Evening (5 PM - 9 PM)</option>
+              <option value="Flexible / Weekend">Flexible / Weekend</option>
+            </select>
+          </label>
+
+          <label>
+            Select Course *
+            <select name="course" required>
+              <option>Basic to Advanced Computer</option>
+              <option>Programming (C, C++)</option>
+              <option>Full Stack Development</option>
+              <option>Python</option>
+              <option>Java</option>
+              <option>Android Development</option>
+            </select>
+          </label>
+
+          <label>
+            Your Current Level
+            <select name="experience">
+              <option value="Beginner">Beginner (No prior knowledge)</option>
+              <option value="Basic">Basic (Little bit of idea)</option>
+              <option value="Intermediate">Intermediate (Have done some practice)</option>
+              <option value="Advanced">Advanced (Want to upgrade skills)</option>
+            </select>
+          </label>
+
+          <label>
+            Anything we should know?
+            <textarea name="message" rows="4" placeholder="Share your goals, college/school, or any specific requirement."></textarea>
+          </label>
+
+          <button class="btn" type="submit">Submit Application via Email</button>
+
+          <div class="small">
+            Having trouble with email? You can also send your details directly on WhatsApp:
+            <br>
+            <a href="https://wa.me/919520608857" target="_blank">Click here to message on WhatsApp</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT: COURSE DETAILS & CONTACT -->
+      <div class="section-card">
+        <h4 class="section-title">Available Courses</h4>
+        <p class="section-note">
+          Choose any one course in the form. We’ll guide you for the best option according to your level.
+        </p>
+
+        <div class="course-list">
+          <div class="course-item">
+            <div class="course-name">Basic to Advanced Computer</div>
+            <div class="course-meta">Perfect for complete beginners — MS Office, Internet, File Management, Basic Productivity Tools.</div>
+          </div>
+          <div class="course-item">
+            <div class="course-name">Programming (C, C++)</div>
+            <div class="course-meta">Strong logic building, problem solving, and fundamentals of programming for college & placements.</div>
+          </div>
+          <div class="course-item">
+            <div class="course-name">Full Stack Development</div>
+            <div class="course-meta">Front-end + Back-end web development for real-world projects and job-ready skills.</div>
+          </div>
+          <div class="course-item">
+            <div class="course-name">Python</div>
+            <div class="course-meta">Beginner-friendly language for automation, basic projects, and future data science path.</div>
+          </div>
+          <div class="course-item">
+            <div class="course-name">Java</div>
+            <div class="course-meta">OOP concepts, project work and strong base for Android / backend development.</div>
+          </div>
+          <div class="course-item">
+            <div class="course-name">Android Development</div>
+            <div class="course-meta">Build Android apps and understand mobile app development with hands-on practice.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;">
+          <h4 class="section-title" style="font-size:16px;">Quick Contact</h4>
+          <p class="section-note">
+            If you want to directly talk before applying, feel free to contact:
+          </p>
+          <div class="wh-contact">
+            <span>Email: <a href="mailto:itversepatshala@gmail.com">itversepatshala@gmail.com</a></span>
+            <span>WhatsApp: <a href="https://wa.me/919520608857" target="_blank">+91 9520608857</a></span>
+          </div>
+
+          <div class="course-tags">
+            <span class="course-tag">Beginner Friendly</span>
+            <span class="course-tag">Hands-on Practice</span>
+            <span class="course-tag">Career Oriented</span>
+            <span class="course-tag">Doubt Support</span>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
