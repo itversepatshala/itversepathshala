@@ -146,6 +146,12 @@
       color: #b0bec5;
     }
 
+    /* Dropdown ka text black + dropdown background light so visible rahe */
+    select, option {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
     label {
       font-size: 14px;
       color: #cfd8dc;
@@ -159,44 +165,30 @@
       gap: 10px;
     }
 
-    .radio-group {
+    .course-list {
       display: flex;
+      flex-direction: column;
       gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 6px;
-    }
-
-    .radio-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.05);
-      cursor: pointer;
-    }
-
-    .radio-pill input {
-      width: auto;
-      margin: 0;
-    }
-
-    .course-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
       margin-top: 8px;
-      font-size: 12px;
+      font-size: 13px;
     }
 
-    .course-tag {
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: rgba(0, 188, 212, 0.16);
-      border: 1px solid rgba(0, 188, 212, 0.4);
+    .course-item {
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .course-name {
+      font-weight: 500;
       color: #e0f7fa;
-      white-space: nowrap;
+    }
+
+    .course-meta {
+      font-size: 12px;
+      color: #b0bec5;
+      margin-top: 2px;
     }
 
     .btn {
@@ -254,34 +246,21 @@
       display: block;
     }
 
-    .wh-contact a {
-      font-weight: 500;
-    }
-
-    .course-list {
+    .course-tags {
       display: flex;
-      flex-direction: column;
-      gap: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
       margin-top: 8px;
-      font-size: 13px;
-    }
-
-    .course-item {
-      padding: 8px 10px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .course-name {
-      font-weight: 500;
-      color: #e0f7fa;
-    }
-
-    .course-meta {
       font-size: 12px;
-      color: #b0bec5;
-      margin-top: 2px;
+    }
+
+    .course-tag {
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(0, 188, 212, 0.16);
+      border: 1px solid rgba(0, 188, 212, 0.4);
+      color: #e0f7fa;
+      white-space: nowrap;
     }
 
     @keyframes fadeIn {
@@ -365,9 +344,8 @@
               'WhatsApp: ' + f.phone.value + '\n' +
               'City: ' + (f.city.value || 'Not provided') + '\n' +
               'Preferred Mode: ' + f.mode.value + '\n' +
-              'Preferred Time: ' + f.timing.value + '\n' +
               'Selected Course: ' + f.course.value + '\n' +
-              'Previous Knowledge: ' + (f.experience.value || 'Beginner / Not mentioned') + '\n' +
+              'Current Level: ' + (f.experience.value || 'Not mentioned') + '\n' +
               'Message: ' + (f.message.value || 'No extra message');
             window.location =
               'mailto:itversepatshala@gmail.com' +
@@ -406,16 +384,6 @@
               </select>
             </label>
           </div>
-
-          <label>
-            Preferred Time *
-            <select name="timing" required>
-              <option value="Morning (7 AM - 11 AM)">Morning (7 AM - 11 AM)</option>
-              <option value="Afternoon (12 PM - 4 PM)">Afternoon (12 PM - 4 PM)</option>
-              <option value="Evening (5 PM - 9 PM)">Evening (5 PM - 9 PM)</option>
-              <option value="Flexible / Weekend">Flexible / Weekend</option>
-            </select>
-          </label>
 
           <label>
             Select Course *
